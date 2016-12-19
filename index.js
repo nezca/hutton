@@ -6,6 +6,12 @@ var app = express();
 
 app.use(express.static('public'));
 
+//------------- aws s3 setting ------------------
+
+var aws = require('aws-sdk');
+app.engine('html', require('ejs').renderFile);
+var S3_BUCKET = process.env.S3_BUCKET;
+
 //------------ local server port setting ---------
 
 app.set('port', (process.env.PORT || 5000));
@@ -72,9 +78,40 @@ handleDisconnect();
 //------------ Pages Routing -------------------------
 
 app.get('/', function(req,res){
+  res.render('intro');
+});
 
-res.render('intro');
+//----------- aws s3 route setting --------------------
+app.get('/account', (req, res) => res.render('account.html'));
 
+app.get('/sign-s3', (req, res) => {
+  const s3 = new aws.S3();
+  const fileName = req.query['file-name'];
+  const fileType = req.query['file-type'];
+  const s3Params = {
+    Bucket: S3_BUCKET,
+    Key: fileName,
+    Expires: 60,
+    ContentType: fileType,
+    ACL: 'public-read'
+  };
+
+  s3.getSignedUrl('putObject', s3Params, (err, data) => {
+    if(err){
+      console.log(err);
+      return res.end();
+    }
+    const returnData = {
+      signedRequest: data,
+      url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}`
+    };
+    res.write(JSON.stringify(returnData));
+    res.end();
+  });
+});
+
+app.post('/save-details', (req, res) => {
+  // TODO: Read POSTed form data and do something useful
 });
 
 //------------ pages routing for MySQL Test ----------
