@@ -1,16 +1,18 @@
 doctype html
-html(lang='en')
+html(lang='ko')
   head
-    title Bootstrap Theme Simply Me
+    title Hutton jitHub
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Archivo+Black', rel='stylesheet')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    
     style.
-      body {
-      font: 20px Montserrat, sans-serif;
+      body {      
+      font-family: 'Archivo+Black', sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
       }
@@ -48,6 +50,13 @@ html(lang='en')
       .navbar-nav  li a:hover {
       color: #1abc9c !important;
       }
+      .btn.btn-default.btn-lg {
+      background-color: #3b5998;
+      color:white;
+      font-weight:bold;
+      font-size-adjust: 0.58;
+      }
+      
   body
     nav.navbar.navbar-default
       .container
@@ -57,47 +66,56 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
           |  
-          a.navbar-brand(href='#') Me
+          a.navbar-brand(href='#') Hutton JitHub
         #myNavbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li
-              a(href='#') WHO
+              a(href='#sori') Hutton sori 
             li
-              a(href='#') WHAT
+              a(href='#sujack') Hutton sujack
             li
-              a(href='#') WHERE
+              a(href='#ill') Hutton ill
     .container-fluid.bg-1.text-center
-      h3.margin Who Am I?
-      |  
-      img.img-responsive.img-circle.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonvanleugen/images/baies_adjust_1.jpg', style='display:inline', alt='Bird', width='350', height='350')
-      h3 I&apos;m an adventurer
+      h3.margin Are You Curious?  
+      a(href='#') 
+        img.img-responsive.img-circle.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/explorer_adjust.jpg', style='display:inline', alt='Bird', width='350', height='350')     
+      h3 being an explorer for unknowns
     .container-fluid.bg-2.text-center
-      h3.margin What Am I?
+      h3.margin What Is The "Hutton JitHub"
       p
-        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      a.btn.btn-default.btn-lg(href='#')
-        span.glyphicon.glyphicon-search
-        |  Search
+        | 누구나 허튼짓거리 한번쯤은 하면서 살아가리라 생각합니다. <br>허튼짓, 허튼 소리, 허튼일 다 좋습니다. <br>저는 다양성을 존중합니다.<br>  세상에 허튼것이란 없습니다.<br> 다만 제자리를 못찾았을뿐입니다.<br>얼마나 박해받으셨는지 한번 확인해볼까요?
+      a.btn.btn-default.btn-lg(href='https://www.facebook.com/Hutton_JitHub-1419997911373622/' target="_blank")
+        span.glyphicon.glyphicon-thumbs-up
+        |  허튼 집합소 구경하기
     .container-fluid.bg-3.text-center
-      h3.margin Where To Find Me?
+      h3.margin 
+        strong Hutton Squad
       br
       .row
         .col-sm-4
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          #sori
+          p 
+            | 허튼소리
           |  
-          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonvanleugen/images/coron_adjust_1.jpg', style='width:100%', alt='Image')
+          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/sori.jpg', style='width:100%', alt='Image')
         .col-sm-4
+          #sujack
           p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            | 허튼수작
           |  
-          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonvanleugen/images/cozy-five_logo_adjust_1.jpg', style='width:100%', alt='Image')
+          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/port.jpg', style='width:100%', alt='Image')
         .col-sm-4
+          #ill
           p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            | 허튼일
           |  
-          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonvanleugen/images/dante.jpg', style='width:100%', alt='Image')
+          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/ill.jpg', style='width:100%', alt='Image')
+        
+      a.btn.btn-default.btn-top(href='#')
+        span.glyphicon.glyphicon-menu-up
+        |  Top
+        
     footer.container-fluid.bg-4.text-center
       p
-        | Bootstrap Theme Made By 
-        a(href='http://www.w3schools.com') www.w3schools.com
+        | Facebook Page 
+        a(href='https://www.facebook.com/Hutton_JitHub-1419997911373622/') Hutton JitHub
