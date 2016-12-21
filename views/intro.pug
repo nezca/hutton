@@ -32,7 +32,7 @@ html(lang='ko')
       color: #555555;
       }
       .bg-4 {
-      background-color: #ffffff; /* Black Gray */
+      background-color: #ffffff; /* White */
       color: ##080808;
       }
       .container-fluid {
@@ -58,12 +58,16 @@ html(lang='ko')
       font-size-adjust: 0.58;
       }
       .container-fluid.bg-4.text-center {
-      color:black;
+      color:#474e5d;
       }
       .margin{
       font-size:300%;
       font-weight:bold;
-      }
+      }      
+      .container-fluid.bg-4.text-center-foot {
+      text-align:center;
+      background-color: #474e5d;
+      }      
   body
     nav.navbar.navbar-default
       .container
@@ -74,70 +78,91 @@ html(lang='ko')
             span.icon-bar
             span.icon-bar
           |  
-          a.navbar-brand(href='#') Hutton JitHub
+          a.navbar-brand(href='#') <strong>Hutton JitHub
         |  
         #myNavbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li
-              a(href='#sori') Hutton sori 
+              a(href='#hutton') 허튼이란?                 
             li
-              a(href='#sujack') Hutton sujack
+              a(href='#blog') 허튼소리
             li
-              a(href='#ill') Hutton ill
+              a(href='#portfolio') 허튼수작
             li
-              a(href='#fam') Hutton cozy-five
+              a(href='#idea') 허튼생각
+            li
+              a(href='#people') 허튼녀석
+            li
+              a(href='#doodle') 허튼낙서
+            li
+              a(href='#cozy-five') 허튼가족
     .container-fluid.bg-1.text-center
-      h3.margin "Hutton is my name"
+      h3.margin "Hutton"
+      #hutton
       a(href='#') 
-        img.img-responsive.img-circle.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/hutton.jpg', style='display:inline', alt='Bird', width='350', height='350')     
+        img.img-responsive.img-circle.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/hutton_again.png', style='display:inline', alt='Hutton', width='350', height='350')     
       h3 
-        | 허튼 [관형사] : 쓸데없이 헤프거나 막된.	 
-      |  
-      p
-        | <br><br>"세상의 모든 허튼 것들을 가치있는 것으로 바꾸려 합니다." <br> - Hutton -
+      p.first
+        | <br>"가치있는 것들만 경외하는 세상에 지쳤어요.. <br><br> 세상이 허튼 것이라고 말하는 것들이 정말로 허튼 것인가요? <br>그저 때와 장소가 맞지 않았던 것은 아닐까 하는 의문이 드네요..<br> "지금은 맞고 그때는 틀리다.." 랄까나..?
       |  
     .container-fluid.bg-2.text-center
       h3.margin "Hutton JitHub"
       p
-        | 가치있는 것들만 추구하는 삶에 지쳤습니다.<br>모든 허튼짓(Hutton Jit)의 허브(Hub)가 되고자 합니다.<br>당신의 허튼짓을 세상과 공유하세요.
+        | <br> 세상 모든 허튼 짓(Hutton Jit)에 대해서 우리 이야기 해봐요. <br> 혹시, 알아요? 그 무가치의 더미속에서 가치를 발견할지..<br>
       |  
       a.btn.btn-default.btn-lg(href='https://www.facebook.com/Hutton_JitHub-1419997911373622/' target="_blank")
         span.glyphicon.glyphicon-thumbs-up
-        |  "Hutton JitHub" on Facebook
+        |  "오늘의 허튼 짓"
     .container-fluid.bg-4.text-center
       h3.margin 
         strong "Hutton Squad"
+        p
+         h4
+          | <br> 어디든 내키는 곳으로 들어가요
+        |  
       br
       .row
-        .col-sm-3
-          #sori
+        .col-sm-2
+          #blog
           p 
             | 허튼소리
           |  
           img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/idea.jpg', style='width:100%', alt='Image')
-        .col-sm-3
-          #sujack
+        .col-sm-2
+          #portfolio
           p
             | 허튼수작
           |  
           img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/idea.jpg', style='width:100%', alt='Image')
-        .col-sm-3
-          #ill
+        .col-sm-2
+          #idea
           p
-            | 허튼일
+            | 허튼생각
           |  
           img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/idea.jpg  ', style='width:100%', alt='Image') 
-        .col-sm-3
-          #fam
+        .col-sm-2
+          #people
           p
-            | 허튼가족
+            | 허튼녀석
           |  
           img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/idea.jpg', style='width:100%', alt='Image')  
+        .col-sm-2
+          #doodle
+          p
+            | 허튼낙서
+          |  
+          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/idea.jpg', style='width:100%', alt='Image')
+        .col-sm-2
+          #cozy-five
+          p
+            | 허튼가족
+          |            
+          img.img-responsive.margin(src='https://s3.ap-northeast-2.amazonaws.com/huttonjithub/img/idea.jpg', style='width:100%', alt='Image')
       a.btn.btn-default.btn-top(href='#')
         span.glyphicon.glyphicon-menu-up
         |  Top
         
-    footer.container-fluid.bg-4.text-center
+    footer.container-fluid.bg-4.text-center-foot
       p
         | Lean more 
         a(href='https://www.facebook.com/Hutton_JitHub-1419997911373622/') Huttonism
