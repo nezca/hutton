@@ -7,9 +7,9 @@ var app = express();
 app.use(express.static('public'));
 
 //------------- aws s3 basic setting ------------------
-//var aws = require('aws-sdk');
-//app.engine('html', require('ejs').renderFile);
-//var S3_BUCKET = process.env.S3_BUCKET;
+var aws = require('aws-sdk');
+app.engine('html', require('ejs').renderFile);
+var S3_BUCKET = process.env.S3_BUCKET;
 
 //------------ local server port setting ---------
 
@@ -78,6 +78,34 @@ handleDisconnect();
 
 app.get('/', function(req,res){
   res.render('intro');
+});
+
+app.get('/huttonism', function(req,res){
+  res.render('huttonism');
+});
+
+app.get('/blog', function(req,res){
+  res.render('blog');
+});
+
+app.get('/portfolio', function(req,res){
+  res.render('portfolio');
+});
+
+app.get('/idea', function(req,res){
+  res.render('idea');
+});
+
+app.get('/person', function(req,res){
+  res.render('person');
+});
+
+app.get('/memorial', function(req,res){
+  res.render('memorial');
+});
+
+app.get('/cozy-five', function(req,res){
+  res.render('cozy-five');
 });
 
 
